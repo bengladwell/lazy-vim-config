@@ -47,6 +47,8 @@ return {
       }),
     }
 
+    -- run ruby processes like `ASTROLOGY_PORT=8002 rdbg -n -O --port 38698 -c -- bundle exec puma -C config/puma.rb -p 3000`
+
     for i, config in ipairs(dap.configurations.ruby) do
       if config.name == "attach existing (port 38698)" then
         config.name = "attach to app server"
